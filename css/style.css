@@ -1,0 +1,130 @@
+/* setup page */
+:root {
+  --nav-size: 67.42px;
+  --light-color: #21212180;
+  --items-color: #fff;
+  --seconday-color: #673ab7e8;
+  --border-radius: 4px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+/* nav */
+nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.nav_flex {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 100px;
+  top: 0;
+  left: 0;
+  color: var(--items-color);
+  background-color: var(--light-color);
+}
+.links_flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.links_flex a,
+.links_flex i {
+  color: var(--items-color);
+}
+.nav_flex .translate_icon {
+  font-size: 25px;
+}
+/* landing */
+.landing {
+  height: 100vh;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: var(--nav-size);
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 3;
+}
+.landing::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
+    opacity: .5;
+}
+.container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - var(--nav-size));
+}
+.landing h1 {
+  width: 800px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 70px;
+  font-size: 45px;
+}
+.landing form input,.landing form select {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  background-color: #ffffff1c;
+  border: none;
+  color: #fff;
+  box-sizing: border-box;
+  margin-block: 10px;
+}
+.switch_currency {
+    display: flex;
+    gap: 20px;
+}
+.landing form .result {
+  background-color: var(--seconday-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+  padding: 20px;
+  margin-inline: 80px;
+  margin-block: 30px;
+
+}
+.convert_btn_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-block: 20px;
+}
+.convert_btn_wrapper button {
+    padding: 10px 20px;
+    background-color: var(--seconday-color);
+    border: none;
+    border-radius:var(--border-radius);
+    color: #Fff;
+}
+/* footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--light-color);
+  width: 100%;
+  text-align: center;
+  color: var(--items-color);
+  z-index: 10;
+}

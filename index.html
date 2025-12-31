@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Currency Convertor</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav_flex">
+        <h2>Currency Convertor</h2>
+        <ul class="links_flex">
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-globe translate_icon"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="landing">
+      <div class="container">
+        <h1>Global Currency Converter. Simple. Fast. Reliable.</h1>
+        <form action="" id="form">
+          <input type="number" placeholder="Enter your amount $" id="amount"/>
+          <!-- <h3 class="result"><span>100</span> USD = <span>5000</span> EGP</h3> -->
+          <div class="switch_currency">
+            <select name="currency-from" id="currency-from">
+              <option value="" disabled selected hidden>Choose Currency From</option>
+            </select>
+            <select name="currency-to" id="currency-to">
+              <option value="" disabled selected hidden>Choose Currency To</option>
+            </select>
+          </div>
+          <div class="convert_btn_wrapper">
+            <button>Convert</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>Made with ❤️ by Ahmed Safwat</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
