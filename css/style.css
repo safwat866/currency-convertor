@@ -32,10 +32,22 @@ nav {
   color: var(--items-color);
   background-color: var(--light-color);
 }
+@media screen and (max-width: 768px) {
+  .nav_flex  {
+    padding: 0;
+    justify-content: center;
+  }
+
+}
 .links_flex {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .links_flex {
+    display: none;
+  }
 }
 .links_flex a,
 .links_flex i {
@@ -68,19 +80,25 @@ nav {
     opacity: .5;
 }
 .container {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: calc(100vh - var(--nav-size));
+  padding-inline: 10px;
 }
 .landing h1 {
-  width: 800px;
+  max-width: 800px;
   letter-spacing: 1px;
   text-align: center;
   padding-top: 70px;
   font-size: 45px;
+}
+@media screen and (max-width: 768px) {
+  .landing h1 {
+    font-size: 35px;
+  }
 }
 .landing form input,.landing form select {
   width: 100%;
@@ -95,8 +113,19 @@ nav {
 }
 .switch_currency {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
 }
+.switch_currency .swap {
+    border: none;
+    background: #FFC107;
+    color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    font-size: 22px;
+}
+
 .landing form .result {
   background-color: var(--seconday-color);
   border-radius: var(--border-radius);
