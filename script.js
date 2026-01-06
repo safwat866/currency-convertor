@@ -64,10 +64,10 @@ function submitForm() {
     if (amount > 0) {
       convertCurrency(select1.value, select2.value, amount);
     } else {
-      alert("amount should be greeter than 0");
+      alert("amount should be greeter than 0 👌");
     }
   } else {
-    alert("please choose unit and amount to convert");
+    alert("please choose unit and amount to convert 😠");
   }
 }
 
