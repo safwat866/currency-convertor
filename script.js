@@ -8,7 +8,11 @@ function fetchData() {
     .then((res) => res.json())
     .then((data) => {
       showCurrencyInDom(Object.keys(data.conversion_rates));
-    });
+    })
+    .catch(err => {
+      console.log(err);
+      alert("something went wrong contact with the website admin 🙃")
+    })
 }
 
 function showCurrencyInDom(keys) {
@@ -46,11 +50,15 @@ function convertCurrency(unit1, unit2, amount) {
     .then((res) => res.json())
     .then((data) => {
       calculateAmount(data.conversion_rates, unit1, unit2, amount);
-    });
+    })
+    .catch(err => {
+      console.log(err);
+      alert('please choose correct unit! 👍')
+    })
 }
 
 function submitForm() {
-  const amount = document.getElementById("amount").value;
+  const amount = +document.getElementById("amount").value;
   // validate data
   if (select1.value != "" && select2.value != "" && amount != "") {
     if (amount > 0) {
