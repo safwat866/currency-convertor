@@ -135,6 +135,11 @@ nav {
   margin-block: 30px;
 
 }
+@media screen and (max-width: 768px) {
+  .landing form .result {
+    margin-inline: 50px;
+  }
+}
 .convert_btn_wrapper {
     display: flex;
     justify-content: center;
